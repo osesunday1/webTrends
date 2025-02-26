@@ -243,13 +243,23 @@ body{
   .nav .nav-links {
     display: flex;
     align-items: center;
+    
   }
   .nav {
     justify-content: space-between;
   }
   .nav .nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #1d2d35;
+    padding: 7px;
+  }
+
+  .nav .nav-links a:hover {
     color: #000000;
     text-decoration: none;
+    background-color: #ffffff;
+    padding: 7px;
   }
   .nav .logo {
     font-size: 22px;
