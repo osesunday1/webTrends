@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Unicons CSS -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/chatbot.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+   <nav class="nav">
+      <i class="uil uil-bars navOpenBtn"></i>
+      <a href="#" class="logo"><img src="" alt=""></a>
+      <ul class="nav-links">
+        <i class="uil uil-times navCloseBtn"></i>
+        <li><a href="#intro">Home</a></li>
+        <li><a href="#add">Add Book</a></li>
+      </ul>
+      <i class="uil uil-search search-icon" id="searchIcon"></i>
+    
+    </nav>
+
+   <section id="intro" class="new-p">
+      <div class="home-top">
+  
+          <div class="grahou2">
+          <div class="grahou">
+              <h2 data-text="grahouglo">
+                INFO-5146
+              </h2><br>
+          </div>
+          <p>MY  Books, MY Control – ManagING with a Click. EXPANDING MY MIND". <span>One book at a time</span></p>
+          </div>
+
+      </div>
+  </section><br>
+  
+  
+  
+  <!-- Book Description Popup -->
+<div id="bookModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <p id="modalDescription"></p>
+    </div>
+</div>
+  
+<!-----------------------------------------View Books-------------------------------------------->
+  
+    <section class="new-p" id="stack">
+        <center><topic>BOOKS I HAVE READ</topic></center>
+        <div class="container2" id="bookContainer">
+            <!-- Books will be inserted here dynamically -->
+        </div>
+    </section>
+    <div id="bookModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+
+
+    <!-------------------------------Edit Books---------------------------------->
+
+    <!-- Edit Book Popup Modal -->
+<div id="editBookModal" class="modal">
+    <div class="modal-content">
+        <span class="close-edit">&times;</span>
+        <h2>Edit Book</h2>
+
+        <form id="editBookForm">
+            <input type="hidden" id="editBookId">
+            
+            <label>Title:</label>
+            <input type="text" id="editTitle" required>
+
+            <label>Author:</label>
+            <input type="text" id="editAuthor" required>
+
+            <label>ISBN:</label>
+            <input type="text" id="editIsbn" required>
+
+            <label>Price:</label>
+            <input type="number" id="editPrice" required>
+
+            <label>Genre:</label>
+            <select id="editGenre" required>
+                <option value="Fiction">Fiction</option>
+                <option value="Non-Fiction">Non-Fiction</option>
+                <option value="Mystery">Mystery</option>
+                <option value="Biography">Biography</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label>Description:</label>
+            <textarea id="editDescription" rows="4" required></textarea>
+
+            <button type="submit">Update Book</button>
+        </form>
+    </div>
+</div>
+  
+  
+<!--------------------Add Book---------------------->
+  
+    <section class="new-p" id="add">
+      <center><topic>Add Book</topic></center>
+
+          <div class="form-c">
+            <form id="bookForm">
+                <div class="mb-4">
+                    <label for="title" class="block text-gray-700 font-medium">Book Title</label>
+                    <input type="text" id="title" name="title" required class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+            
+                <div class="mb-4">
+                    <label for="author" class="block text-gray-700 font-medium">Author</label>
+                    <input type="text" id="author" name="author" required class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+            
+                <div class="mb-4">
+                    <label for="isbn" class="block text-gray-700 font-medium">ISBN</label>
+                    <input type="text" id="isbn" name="isbn" required class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+
+                <div class="mb-4">
+                    <label for="image" class="block text-gray-700 font-medium">Image</label>
+                    <input type="text" id="image" name="image" placeholder="Image Direct Link" required class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+            
+                <div class="mb-4">
+                    <label for="price" class="block text-gray-700 font-medium">Price ($)</label>
+                    <input type="number" id="price" name="price" required class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+            
+                <div class="mb-4">
+                    <label for="genre" class="block text-gray-700 font-medium">Genre</label>
+                    <select id="genre" name="genre" required class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="" disabled selected>Select Genre</option>
+                        <option value="Fiction">Fiction</option>
+                        <option value="Non-Fiction">Non-Fiction</option>
+                        <option value="Mystery">Mystery</option>
+                        <option value="Biography">Biography</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+            
+                <div class="mb-4">
+                    <label for="description" class="block text-gray-700 font-medium">Description</label>
+                    <textarea id="description" name="description" rows="4" required class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                </div>
+            
+                <button type="button" id="submitData" name="submitData" class="close3">Add Book</button>
+            </form>
+            
+          </div>
+
+
+
+      </section>
+
+<!--------------------chat bot---------------------->
+    <!--------------------chat bot--------------------
+    <div id="chatbot-icon">💬</div>
+
+    <-- Chatbot Container
+    <div id="chatbot-container" class="hidden">
+        <div id="chatbot-header">
+            <span>Chatbot</span>
+            <button id="close-btn">&times;</button>
+        </div>
+        <div id="chatbot-body">
+            <div id="chatbot-messages"></div>
+        </div>
+        <div id="chatbot-input-container">
+            <input type="text" id="chatbot-input" placeholder="Type a message..." />
+            <button id="send-btn">Send</button>
+        </div>
+    </div>
+-->
+  <!-- Floating Chat Icon 
+    <div id="chatIcon" class="chat-icon">&#128233;</div>-->
+    <div id="chatIcon" class="chat-icon">
+        <i class="fa-solid fa-user"></i>
+    </div>
+
+    <!-- Chat Window Container -->
+    <div id="chatWindowContainer" class="chat-window-container">
+        <div class="chat-header">
+            <span>AI Chat</span>
+            <button id="closeChat">X</button>
+        </div>
+    <div id="chat-messages" class="chat-messages"></div>
+        <div class="chat-input-container">
+            <input type="text" id="user-input" placeholder="Ask your question..." required>
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+
+<!--------------------chat bot---------------------->
+  
+    <footer class="footer">
+
+      <center><h2>@2025 OSEYENBHIN</h2></center> 
+   
+   
+   </footer>
+
+<script src="chatbot.js"></script>
+<script src="script.js"></script>
+<script type="module" src="firestore.js"></script>
+
+
+
+
+</body>
+</html>
