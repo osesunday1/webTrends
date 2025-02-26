@@ -215,9 +215,9 @@ body{
 
 .footer h2{
   font-family: poppins;
-  font-size: 10px;
-  font-weight: 50;
-  color: #ffffff;
+  font-size: 15px;
+  font-weight:bold;
+  color: #000000;
 }
 
 /*=================================== footer=========================== */
