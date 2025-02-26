@@ -98,14 +98,14 @@ async function loadBooks() {
                     <p>Price: $${book.price ? book.price.toFixed(2) : 'N/A'}</p>
                     
                     <div class="icons">
-                        <a href="#" class="read-more" data-title="${book.title}" data-description="${book.description}">
+                        <a href="" class="read-more" data-title="${book.title}" data-description="${book.description}">
                             <i class="fas fa-eye"></i>
                         </a>
-                        <a href="#" class="edit-book" data-id="${bookId}" data-title="${book.title}" data-author="${book.author}" 
+                        <a href="" class="edit-book" data-id="${bookId}" data-title="${book.title}" data-author="${book.author}" 
                             data-isbn="${book.isbn}" data-price="${book.price}" data-genre="${book.genre}" data-description="${book.description}">
                             <i class="fas fa-edit"></i>
                         </a>
-                        <a href="#" class="delete-book" data-id="${bookId}">
+                        <a href="" class="delete-book" data-id="${bookId}">
                             <i class="fas fa-trash"></i>
                         </a>
                     </div>
