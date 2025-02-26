@@ -1,3 +1,8 @@
+Project Overview
+
+This is a Book Management Website built using HTML, CSS, JavaScript, and Firebase Firestore. 
+The platform allows users to add, view, edit, and delete books dynamically. Each book entry consists of a title, 
+author, ISBN, price, genre, and description. The system is connected to Firebase Firestore for real-time data management.
 
 
 Core Features
